@@ -1,37 +1,35 @@
 import React, {Component} from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
 class App extends Component {
-
-  constructor() {
+  constructor(){
     super();
+
     this.state = {
       filterString: "",
-      array: ["things", "more things", " and then even more of the things"]
-    };
+      interests: ['music', 'reading', 'being outdoors', 'anything with animals', 'playing with plants']
+    }
+  }
+  handleChange(filter){
+    this.setState({filterString : filter})
   }
 
-  handleChange(filter) {
-    this.setState({ filterString: filter });
-  }
-
-  render () {
-    let arrayDisplay = this.state.array
+  render(){
+    let simpleInterests = this.state.interests
       .filter((element, index) => {
-        return element.includes(this.state.filterString);
-     })
+        return element.includes(this.state.filterString)
+      })
       .map((element, index) => {
         return <h2 key={index}>{element}</h2>;
-      });
+      })
 
-    return (
-      <div className="App">
-        <input onChange={e => this.handleChange(e.target.value)} type="text" />
-        {arrayDisplay}  
+    return(
+      <div className= "App">
+        <input
+          onChange={e => this.handleChange(e.target.value)} type='text' />
+          {simpleInterests}
       </div>
     );
   }
 }
-
-export default App;
+export default App

@@ -1,13 +1,14 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 
-export default class Image extends Component {
+class Image extends Component {
+
   render(){
-    return (
+    return(
       <div>
-        <img src={this.props.url} />
-        <div>Her Last Performance</div>
+       <div>The Magnificent Lady Day's Last Performance</div> 
+       <img src="https://i.redd.it/xtrgtrkotd701.jpg"/>
       </div>
     )
   }
 }
-
+export default Image

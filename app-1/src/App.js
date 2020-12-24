@@ -1,30 +1,26 @@
 import React, {Component} from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
 class App extends Component {
-
   constructor(){
-    super();
+    super()
 
     this.state = {
-      message: ""
-    };
+      message: ''
+    }
   }
-
   handleChange(value){
-    this.setState({message:value});
+    this.setState = ({message : value})
   }
 
-
-  render() {
+  render(){
     return (
-      <div className="App">
-        <input onChange={e => this.handleChange(e.target.value)} type="text" />
-        <p>{this.state.message}</p>
+      <div className = "App">
+        <input 
+          onChange ={e => this.handleChange(e.target.value)} type="text" />
       </div>
-    );
+    ) 
   }
+     
 }
-
-export default App;
+export default App
